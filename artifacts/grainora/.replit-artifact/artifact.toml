@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "GRAINORA™ — Corporate Website"
+version = "1.0.0"
+id = "artifacts/grainora"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23501
+
+[services.development]
+run = "pnpm --filter @workspace/grainora run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/grainora", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/grainora/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23501"
+BASE_PATH = "/"

@@ -1,0 +1,115 @@
+Create an ultra-premium, luxury corporate website for GRAINORA™️, a global food company founded in Bodoland, India.
+
+IMPORTANT:
+This must NOT look like a template or an ordinary food website.
+It should feel like Apple, Rolex, Porsche, Nothing, and Aesop combined with a modern FMCG company.
+
+Brand Positioning:
+GRAINORA™️
+CREATE MORE.
+Building the Future of Food.
+
+Products:
+Rice
+Tea
+Spices
+Pulses
+Edible Oils
+Snacks
+Grocery Essentials
+Future Food Products
+
+Design Requirements:
+
+• Extremely premium luxury UI/UX
+• Cinematic fullscreen hero
+• Apple-level minimalism
+• Beautiful premium typography
+• Massive white space
+• Glassmorphism
+• Soft shadows
+• Luxury gradients
+• Elegant green, white, gold and charcoal palette
+• Rounded premium cards
+• Smooth micro-interactions
+• Beautiful hover animations
+• Magnetic buttons
+• Animated mouse cursor effects
+• Smooth scrolling
+• Parallax scrolling
+• Scroll-triggered animations
+• GSAP + Framer Motion animations
+• Lenis smooth scrolling
+• Animated page transitions
+• Blur transitions
+• Text reveal animations
+• Image reveal animations
+• Floating particles
+• Floating food elements
+• Premium loading screen
+• Dynamic background effects
+• 3D card hover
+• Premium product showcase
+• Interactive timeline
+• Animated counters
+• Infinite marquee
+• Premium icon animations
+• Video background support
+• Lottie animation support
+• Responsive on every device
+• Retina ready
+• SEO optimized
+• Accessibility optimized
+• Extremely fast performance
+
+Technology:
+Next.js 15
+React
+TypeScript
+Tailwind CSS
+Framer Motion
+GSAP
+Lenis
+Three.js (subtle effects only)
+
+Pages:
+• Home
+• Company
+• Products
+• Quality
+• Sustainability
+• Distributor
+• Newsroom
+• Careers
+• Contact
+
+Homepage Sections:
+• Luxury Hero
+• Company Story
+• Food Categories
+• Quality & Lab Tested
+• Innovation
+• Sustainability
+• Distributor Network
+• Latest News
+• Call to Action
+• Premium Footer
+
+Quality Section:
+✔ Lab Tested
+✔ Quality Assured
+✔ Hygienically Processed
+✔ Carefully Selected Ingredients
+✔ Trusted Food Standards
+
+Visual Style:
+Use cinematic photography placeholders.
+
+Everything should feel expensive.
+No generic templates.
+No stock-looking layouts.
+Every section should have premium animations.
+
+The website should look worthy of a billion-dollar global food company.
+
+Generate a complete production-ready project with clean folder structure, reusable components, and professional code quality.

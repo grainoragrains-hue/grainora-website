@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: hsl(var(--primary-border));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: hsl(var(--secondary-border));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: hsl(var(--muted-border));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: hsl(var(--accent-border));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: hsl(var(--destructive-border));
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Ivory white background */
+  --background: 43 27% 96%;
+  /* Rich charcoal foreground */
+  --foreground: 240 3% 11%;
+  
+  --border: 156 10% 85%;
+  --input: 156 10% 85%;
+  --ring: 46 65% 52%;
+
+  /* Very light green-tinted ivory for cards */
+  --card: 43 27% 98%;
+  --card-foreground: 240 3% 11%;
+  --card-border: 156 10% 90%;
+
+  --popover: 43 27% 98%;
+  --popover-foreground: 240 3% 11%;
+  --popover-border: 156 10% 90%;
+
+  /* Deep forest green */
+  --primary: 156 54% 11%;
+  --primary-foreground: 43 27% 96%;
+  --primary-border: 156 54% 15%;
+
+  /* Warm gold */
+  --secondary: 46 65% 52%;
+  --secondary-foreground: 156 54% 11%;
+  --secondary-border: 46 65% 45%;
+
+  /* Subtle muted green */
+  --muted: 156 15% 90%;
+  --muted-foreground: 156 20% 40%;
+  --muted-border: 156 15% 85%;
+
+  /* Gold accent */
+  --accent: 46 65% 52%;
+  --accent-foreground: 156 54% 11%;
+  --accent-border: 46 65% 45%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --destructive-border: 0 84% 50%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Deep forest green background */
+  --background: 156 54% 11%;
+  /* Ivory white foreground */
+  --foreground: 43 27% 96%;
+
+  --border: 156 30% 20%;
+  --input: 156 30% 20%;
+  --ring: 46 65% 52%;
+
+  /* Slightly lighter forest green for cards */
+  --card: 156 50% 14%;
+  --card-foreground: 43 27% 96%;
+  --card-border: 156 30% 20%;
+
+  --popover: 156 50% 14%;
+  --popover-foreground: 43 27% 96%;
+  --popover-border: 156 30% 20%;
+
+  /* Ivory primary in dark mode */
+  --primary: 43 27% 96%;
+  --primary-foreground: 156 54% 11%;
+  --primary-border: 43 27% 90%;
+
+  /* Warm gold */
+  --secondary: 46 65% 52%;
+  --secondary-foreground: 156 54% 11%;
+  --secondary-border: 46 65% 45%;
+
+  /* Muted dark green */
+  --muted: 156 40% 18%;
+  --muted-foreground: 156 20% 70%;
+  --muted-border: 156 40% 25%;
+
+  --accent: 46 65% 52%;
+  --accent-foreground: 156 54% 11%;
+  --accent-border: 46 65% 45%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 43 27% 96%;
+  --destructive-border: 0 62% 20%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(var(--secondary));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: hsl(var(--secondary));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hovering {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Hide default cursor on desktop */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"], input, select, textarea {
+    cursor: none;
+  }
+}
+
+/* Hide scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.4);
+}
