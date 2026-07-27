@@ -11,6 +11,7 @@ import { LenisProvider } from '@/components/layout/LenisProvider';
 import Home from '@/pages/Home';
 import Products from '@/pages/Products';
 import Contact from '@/pages/Contact';
+import OurStory from '@/pages/OurStory';
 import GenericPage from '@/pages/GenericPage';
 
 const queryClient = new QueryClient();
@@ -21,27 +22,46 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/products" component={Products} />
       <Route path="/contact" component={Contact} />
-      
-      {/* Reusing generic page for others to save time while keeping navigation alive */}
-      <Route path="/company">
-        <GenericPage title="Our Story" subtitle="Born in Bodoland. Built for the world." />
-      </Route>
+
+      {/* Company */}
+      <Route path="/company" component={OurStory} />
+
+      {/* Remaining pages (temporarily using GenericPage) */}
       <Route path="/quality">
-        <GenericPage title="Quality Standards" subtitle="Exceeding international food safety guidelines." />
+        <GenericPage
+          title="Quality Standards"
+          subtitle="Every Grainora product undergoes quality checks, with laboratory testing forming an important part of our quality assurance process."
+        />
       </Route>
+
       <Route path="/sustainability">
-        <GenericPage title="Sustainability" subtitle="Earth-forward initiatives and community impact." />
+        <GenericPage
+          title="Sustainability"
+          subtitle="Growing responsibly for a better future."
+        />
       </Route>
+
       <Route path="/distributor">
-        <GenericPage title="Distributor Network" subtitle="Join our global presence across 25+ countries." />
+        <GenericPage
+          title="Distributor Network"
+          subtitle="Growing Together Across Global Markets."
+        />
       </Route>
+
       <Route path="/newsroom">
-        <GenericPage title="Newsroom" subtitle="Latest press releases and announcements." />
+        <GenericPage
+          title="Newsroom"
+          subtitle="Latest News & Updates."
+        />
       </Route>
+
       <Route path="/careers">
-        <GenericPage title="Careers" subtitle="Join the team building the future of food." />
+        <GenericPage
+          title="Careers"
+          subtitle="Build the Future with Grainora."
+        />
       </Route>
-      
+
       <Route component={NotFound} />
     </Switch>
   );
